@@ -11,7 +11,11 @@ import Expenses from "@/components/Expenses";
 import Settlements from "@/components/Settlements";
 
 export const SPLITPAY_CONTRACT_ADDRESS =
-    "0xb6f2469Df91A6D73DBC731c3bA385007f6c683d1";
+    "0x36Eef317F736FC5d7D0CAAe80a1bD7aD1D93B874";
+
+// TESTNET
+// export const SPLITPAY_CONTRACT_ADDRESS =
+//     "0xb6f2469Df91A6D73DBC731c3bA385007f6c683d1";
 
 export type UserStats = {
     effectiveBalance: bigint;

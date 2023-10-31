@@ -11,10 +11,7 @@ import { Toaster } from "react-hot-toast";
 
 const projectId = process.env.NEXT_PUBLIC_WC_PROJECT_ID as string; // get one at https://cloud.walletconnect.com/app
 
-const { chains, publicClient } = configureChains(
-    [Celo, Alfajores],
-    [publicProvider()]
-);
+const { chains, publicClient } = configureChains([Celo], [publicProvider()]);
 
 const connectors = celoGroups({
     chains,
