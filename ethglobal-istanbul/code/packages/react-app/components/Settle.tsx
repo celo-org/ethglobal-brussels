@@ -1,5 +1,5 @@
 import { SPLITPAY_CONTRACT_ADDRESS } from "@/pages";
-import { usePublicClient, useWalletClient } from "wagmi";
+import { useNetwork, usePublicClient, useWalletClient } from "wagmi";
 import SplitPayAbi from "../abis/SplitPay";
 import StableToken from "@celo/abis/StableToken.json";
 import { formatEther } from "viem";
@@ -17,6 +17,7 @@ type SettleProps = {
 function Settle(props: SettleProps) {
     const { data: walletClient } = useWalletClient();
     const publicClient = usePublicClient();
+    const { chain } = useNetwork();
 
     let { className, title, paid, amount, settlementId } = props;
 
@@ -32,6 +33,7 @@ function Settle(props: SettleProps) {
                     abi: StableToken.abi,
                     address: STABLE_TOKEN_ADDRESS,
                     functionName: "approve",
+                    chain,
                     args: [SPLITPAY_CONTRACT_ADDRESS, amount],
                 });
 
@@ -56,6 +58,7 @@ function Settle(props: SettleProps) {
                 let hash = await walletClient.writeContract({
                     address: SPLITPAY_CONTRACT_ADDRESS,
                     abi: SplitPayAbi,
+                    chain,
                     functionName: "settle",
                     args: [settlementId],
                 });

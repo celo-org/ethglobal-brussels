@@ -1,6 +1,11 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Dispatch, Fragment, SetStateAction, useState } from "react";
-import { useAccount, usePublicClient, useWalletClient } from "wagmi";
+import {
+    useAccount,
+    useNetwork,
+    usePublicClient,
+    useWalletClient,
+} from "wagmi";
 import SplitPayAbi from "../abis/SplitPay";
 import { SPLITPAY_CONTRACT_ADDRESS } from "@/pages";
 import { parseUnits } from "viem";
@@ -16,6 +21,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
     const { data: walletClient } = useWalletClient();
     const publicClient = usePublicClient();
     const { address } = useAccount();
+    const { chain } = useNetwork();
 
     const [expenseTitle, setExpenseTitle] = useState<string>("");
     const [expenseAmount, setExpenseAmount] = useState<string>("");
@@ -48,6 +54,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                     abi: SplitPayAbi,
                     address: SPLITPAY_CONTRACT_ADDRESS,
                     functionName: "createExpense",
+                    chain,
                     args: [
                         expenseTitle,
                         parseUnits(expenseAmount as `${number}`, 18),
