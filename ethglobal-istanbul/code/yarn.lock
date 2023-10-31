@@ -29,6 +29,11 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@celo/abis@^9.0.6":
+  version "9.0.6"
+  resolved "https://registry.yarnpkg.com/@celo/abis/-/abis-9.0.6.tgz#3586f578394cb0408f17335cdaedf98fd9f47d7c"
+  integrity sha512-w/zQWAnJMUfthiFyzUoSKgZ1DQDKjXaSmImwGRDi6U9SPyEx5rWsHm7tsoVXoxYzAdPbtpkeFykQPvPqCJfHmA==
+
 "@celo/base@1.5.2":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@celo/base/-/base-1.5.2.tgz#168ab5e4e30b374079d8d139fafc52ca6bfd4100"
@@ -624,12 +629,17 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.0.0.tgz#f22824caff3ae506b18207bad4126dbc6ccdb6b8"
   integrity sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==
 
-"@headlessui/react@^1.7.14":
+"@headlessui/react@^1.7.17":
   version "1.7.17"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.17.tgz#a0ec23af21b527c030967245fd99776aa7352bc6"
   integrity sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==
   dependencies:
     client-only "^0.0.1"
+
+"@headlessui/tailwindcss@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@headlessui/tailwindcss/-/tailwindcss-0.2.0.tgz#2c55c98fd8eee4b4f21ec6eb35a014b840059eec"
+  integrity sha512-fpL830Fln1SykOCboExsWr3JIVeQKieLJ3XytLe/tt1A0XzqUthOftDmjcCYLW62w7mQI7wXcoPXr3tZ9QfGxw==
 
 "@heroicons/react@^2.0.18":
   version "2.0.18"
