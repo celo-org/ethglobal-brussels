@@ -144,7 +144,9 @@ export default function Home() {
                         </button>
 
                         <MyModal isOpen={isOpen} setIsOpen={setIsOpen} />
-                        <Expenses expenses={expenses} />
+                        <div className="mt-2 w-full">
+                            {expenses && <Expenses expenses={expenses} />}
+                        </div>
                     </Tab.Panel>
                     <Tab.Panel>
                         <Settlements settlements={settlements} />
