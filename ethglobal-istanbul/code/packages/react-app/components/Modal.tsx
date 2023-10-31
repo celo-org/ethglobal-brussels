@@ -146,7 +146,10 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                                             />
                                         </div>
                                         {settlers.map((settler, index) => (
-                                            <div className="flex space-x-2">
+                                            <div
+                                                key={index}
+                                                className="flex space-x-2"
+                                            >
                                                 <input
                                                     onChange={({ target }) =>
                                                         addSettler(
