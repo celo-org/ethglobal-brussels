@@ -3,6 +3,7 @@ import { usePublicClient, useWalletClient } from "wagmi";
 import SplitPayAbi from "../abis/SplitPay";
 import StableToken from "@celo/abis/StableToken.json";
 import { formatEther } from "viem";
+import toast from "react-hot-toast";
 
 type SettleProps = {
     className?: string;
@@ -20,33 +21,60 @@ function Settle(props: SettleProps) {
 
     async function approveCUSD() {
         if (walletClient) {
-            let hash = await walletClient.writeContract({
-                abi: StableToken.abi,
-                address: "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
-                functionName: "approve",
-                args: [SPLITPAY_CONTRACT_ADDRESS, amount],
+            let approveToast = toast.loading("Approving cUSD", {
+                position: "top-center",
+                duration: 10000,
             });
 
-            await publicClient.waitForTransactionReceipt({ hash });
+            try {
+                let hash = await walletClient.writeContract({
+                    abi: StableToken.abi,
+                    address: "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+                    functionName: "approve",
+                    args: [SPLITPAY_CONTRACT_ADDRESS, amount],
+                });
+
+                await publicClient.waitForTransactionReceipt({ hash });
+
+                toast.success("cUSD Approved!", { id: approveToast });
+            } catch (e) {
+                toast.error("Something Went Wrong", { id: approveToast });
+                throw Error("Something went wrong");
+            }
         }
     }
 
     async function callSettle() {
         if (walletClient) {
-            let hash = await walletClient.writeContract({
-                address: SPLITPAY_CONTRACT_ADDRESS,
-                abi: SplitPayAbi,
-                functionName: "settle",
-                args: [settlementId],
+            let settleToast = toast.loading("Settling", {
+                position: "top-center",
+                duration: 10000,
             });
-            await publicClient.waitForTransactionReceipt({ hash });
+
+            try {
+                let hash = await walletClient.writeContract({
+                    address: SPLITPAY_CONTRACT_ADDRESS,
+                    abi: SplitPayAbi,
+                    functionName: "settle",
+                    args: [settlementId],
+                });
+                await publicClient.waitForTransactionReceipt({ hash });
+                toast.success("Settled!", { id: settleToast });
+            } catch (e) {
+                toast.error("Something went wrong", { id: settleToast });
+            }
         }
     }
 
     async function settle() {
         if (walletClient) {
-            await approveCUSD();
-            await callSettle();
+            approveCUSD()
+                .then(async () => {
+                    await callSettle();
+                })
+                .catch((e) => {
+                    console.log(e);
+                });
         }
     }
 
