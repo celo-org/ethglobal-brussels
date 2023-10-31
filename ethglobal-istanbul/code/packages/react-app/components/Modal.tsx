@@ -1,5 +1,11 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { useAccount, usePublicClient, useWalletClient } from "wagmi";
+import SplitPayAbi from "../abis/SplitPay";
+import { SPLITPAY_CONTRACT_ADDRESS } from "@/pages";
+import { parseUnits } from "viem";
+import toast from "react-hot-toast";
+import { LookupResponse } from "@/pages/api/socialconnect/lookup";
 
 type ModalProps = {
     isOpen: boolean;
@@ -7,15 +13,73 @@ type ModalProps = {
 };
 
 export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
-    const [settlers, setSettler] = useState<string[]>([]);
+    const { data: walletClient } = useWalletClient();
+    const publicClient = usePublicClient();
+    const { address } = useAccount();
+
+    const [expenseTitle, setExpenseTitle] = useState<string>("");
+    const [expenseAmount, setExpenseAmount] = useState<string>("");
+    const [settlers, setSettlers] = useState<string[]>([]);
 
     function closeModal() {
         setIsOpen(false);
-        setSettler([]);
+        setSettlers([]);
+        setExpenseTitle("");
+        setExpenseAmount("");
     }
 
-    function addSettler() {
-        setSettler([...settlers, ""]);
+    function addSettlerField() {
+        setSettlers([...settlers, ""]);
+    }
+
+    function addSettler(index: number, value: string) {
+        settlers[index] = value;
+        setSettlers([...settlers]);
+    }
+
+    async function createExpense() {
+        if (walletClient) {
+            let createToast = toast.loading("Creating Expense", {
+                duration: 15000,
+                position: "top-center",
+            });
+            try {
+                let hash = await walletClient.writeContract({
+                    abi: SplitPayAbi,
+                    address: SPLITPAY_CONTRACT_ADDRESS,
+                    functionName: "createExpense",
+                    args: [
+                        expenseTitle,
+                        parseUnits(expenseAmount as `${number}`, 18),
+                        [address, ...settlers],
+                    ],
+                });
+                await publicClient.waitForTransactionReceipt({ hash });
+                toast.success("Expense Created!", { id: createToast });
+            } catch (e) {
+                toast.error("Something Went Wrong!", { id: createToast });
+            } finally {
+                closeModal();
+            }
+        }
+    }
+
+    async function lookup(index: number) {
+        let response: Response = await fetch(
+            `/api/socialconnect/lookup?${new URLSearchParams({
+                handle: settlers[index],
+            })}`,
+            {
+                method: "GET",
+            }
+        );
+
+        let lookupResponse: LookupResponse = await response.json();
+        if (lookupResponse.accounts.length > 0) {
+            addSettler(index, lookupResponse.accounts[0]);
+        } else {
+            addSettler(index, "");
+        }
     }
 
     return (
@@ -57,6 +121,12 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                                             <label htmlFor="title">Title</label>
                                             <input
                                                 name="title"
+                                                value={expenseTitle}
+                                                onChange={({ target }) =>
+                                                    setExpenseTitle(
+                                                        target.value
+                                                    )
+                                                }
                                                 className="w-full border border-black bg-gypsum py-2 px-4 outline-none"
                                             />
                                         </div>
@@ -67,25 +137,61 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                                             <input
                                                 name="value"
                                                 type="number"
+                                                onChange={({ target }) =>
+                                                    setExpenseAmount(
+                                                        target.value
+                                                    )
+                                                }
                                                 className="w-full border border-black bg-gypsum py-2 px-4 outline-none"
                                             />
                                         </div>
-                                        {settlers.map((settler) => (
-                                            <input className="border border-black w-full bg-gypsum px-4 py-2 outline-none" />
+                                        {settlers.map((settler, index) => (
+                                            <div className="flex space-x-2">
+                                                <input
+                                                    onChange={({ target }) =>
+                                                        addSettler(
+                                                            index,
+                                                            target.value
+                                                        )
+                                                    }
+                                                    value={settlers[index]}
+                                                    className="border border-black w-full bg-gypsum px-4 py-2 outline-none"
+                                                />
+                                                {settlers[index].length > 2 &&
+                                                    !settlers[index].startsWith(
+                                                        "0x"
+                                                    ) && (
+                                                        <button
+                                                            onClick={() =>
+                                                                lookup(index)
+                                                            }
+                                                            className="border border-black px-2"
+                                                        >
+                                                            Lookup
+                                                        </button>
+                                                    )}
+                                            </div>
                                         ))}
                                         <button
-                                            onClick={addSettler}
-                                            className="self-end px-2 py-2 bg-prosperity border-black border"
+                                            onClick={addSettlerField}
+                                            className="self-start px-2 py-2 bg-prosperity border-black border"
                                         >
                                             + Add Settler
                                         </button>
                                     </div>
 
-                                    <div className="mt-4">
+                                    <div className="mt-4 flex justify-end w-full space-x-2">
                                         <button
                                             type="button"
                                             className="border-black inline-flex justify-center border  bg-prosperity px-4 py-2 text-sm font-medium text-black hover:bg-prosperity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                                             onClick={closeModal}
+                                        >
+                                            Close
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className="border-black inline-flex justify-center border  bg-prosperity px-4 py-2 text-sm font-medium text-black hover:bg-prosperity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                                            onClick={createExpense}
                                         >
                                             Add
                                         </button>

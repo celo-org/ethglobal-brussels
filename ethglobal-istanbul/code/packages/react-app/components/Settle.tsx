@@ -4,6 +4,7 @@ import SplitPayAbi from "../abis/SplitPay";
 import StableToken from "@celo/abis/StableToken.json";
 import { formatEther } from "viem";
 import toast from "react-hot-toast";
+import { STABLE_TOKEN_ADDRESS } from "@/SocialConnect/utils";
 
 type SettleProps = {
     className?: string;
@@ -29,7 +30,7 @@ function Settle(props: SettleProps) {
             try {
                 let hash = await walletClient.writeContract({
                     abi: StableToken.abi,
-                    address: "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1",
+                    address: STABLE_TOKEN_ADDRESS,
                     functionName: "approve",
                     args: [SPLITPAY_CONTRACT_ADDRESS, amount],
                 });
