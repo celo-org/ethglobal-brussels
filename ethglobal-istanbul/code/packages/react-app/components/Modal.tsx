@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 import {
     useAccount,
     useNetwork,
@@ -26,6 +26,11 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
     const [expenseTitle, setExpenseTitle] = useState<string>("");
     const [expenseAmount, setExpenseAmount] = useState<string>("");
     const [settlers, setSettlers] = useState<string[]>([]);
+    const [isFormValid, setIsFormValid] = useState<boolean>(false);
+
+    useEffect(() => {
+        checkIfFormValid();
+    }, [expenseAmount, expenseTitle, settlers]);
 
     function closeModal() {
         setIsOpen(false);
@@ -72,6 +77,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
     }
 
     async function lookup(index: number) {
+        let lookupToast = toast.loading("Looking up the address");
         let response: Response = await fetch(
             `/api/socialconnect/lookup?${new URLSearchParams({
                 handle: settlers[index],
@@ -84,9 +90,24 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
         let lookupResponse: LookupResponse = await response.json();
         if (lookupResponse.accounts.length > 0) {
             addSettler(index, lookupResponse.accounts[0]);
+            toast.success("Address found!", { id: lookupToast });
         } else {
             addSettler(index, "");
+            toast.error("No Address found", { id: lookupToast });
         }
+    }
+
+    async function checkIfFormValid() {
+        if (
+            expenseTitle.length > 0 &&
+            expenseAmount.length > 0 &&
+            settlers.length > 0 &&
+            !settlers.includes("")
+        ) {
+            return setIsFormValid(true);
+        }
+
+        return setIsFormValid(false);
     }
 
     return (
@@ -200,8 +221,9 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                                         </button>
                                         <button
                                             type="button"
-                                            className="border-black inline-flex justify-center border  bg-prosperity px-4 py-2 text-sm font-medium text-black hover:bg-prosperity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                                            className="border-black inline-flex justify-center border  bg-prosperity px-4 py-2 text-sm font-medium text-black hover:bg-prosperity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:bg-gray-200"
                                             onClick={createExpense}
+                                            disabled={!isFormValid}
                                         >
                                             Add
                                         </button>

@@ -1,5 +1,10 @@
 import { SPLITPAY_CONTRACT_ADDRESS } from "@/pages";
-import { useNetwork, usePublicClient, useWalletClient } from "wagmi";
+import {
+    useAccount,
+    useNetwork,
+    usePublicClient,
+    useWalletClient,
+} from "wagmi";
 import SplitPayAbi from "../abis/SplitPay";
 import StableToken from "@celo/abis/StableToken.json";
 import { formatEther } from "viem";
@@ -16,6 +21,7 @@ type SettleProps = {
 
 function Settle(props: SettleProps) {
     const { data: walletClient } = useWalletClient();
+    const { address } = useAccount();
     const publicClient = usePublicClient();
     const { chain } = useNetwork();
 
@@ -23,62 +29,64 @@ function Settle(props: SettleProps) {
 
     async function approveCUSD() {
         if (walletClient) {
-            let approveToast = toast.loading("Approving cUSD", {
-                position: "top-center",
-                duration: 10000,
+            let hash = await walletClient.writeContract({
+                abi: StableToken.abi,
+                address: STABLE_TOKEN_ADDRESS,
+                functionName: "approve",
+                chain,
+                args: [SPLITPAY_CONTRACT_ADDRESS, amount],
             });
 
-            try {
-                let hash = await walletClient.writeContract({
-                    abi: StableToken.abi,
-                    address: STABLE_TOKEN_ADDRESS,
-                    functionName: "approve",
-                    chain,
-                    args: [SPLITPAY_CONTRACT_ADDRESS, amount],
-                });
-
-                await publicClient.waitForTransactionReceipt({ hash });
-
-                toast.success("cUSD Approved!", { id: approveToast });
-            } catch (e) {
-                toast.error("Something Went Wrong", { id: approveToast });
-                throw Error("Something went wrong");
-            }
+            await publicClient.waitForTransactionReceipt({ hash });
         }
     }
 
     async function callSettle() {
         if (walletClient) {
-            let settleToast = toast.loading("Settling", {
+            let hash = await walletClient.writeContract({
+                address: SPLITPAY_CONTRACT_ADDRESS,
+                abi: SplitPayAbi,
+                chain,
+                functionName: "settle",
+                args: [settlementId],
+            });
+            await publicClient.waitForTransactionReceipt({ hash });
+        }
+    }
+
+    async function checkIfApprovalNeeded() {
+        let allowance = (await publicClient.readContract({
+            abi: StableToken.abi,
+            address: STABLE_TOKEN_ADDRESS,
+            functionName: "allowance",
+            args: [address, SPLITPAY_CONTRACT_ADDRESS],
+        })) as bigint;
+
+        if (allowance >= amount) {
+            return false;
+        }
+
+        return true;
+    }
+
+    async function settle() {
+        if (walletClient) {
+            let settleToast = toast.loading("Checking if approval needed", {
                 position: "top-center",
                 duration: 10000,
             });
 
             try {
-                let hash = await walletClient.writeContract({
-                    address: SPLITPAY_CONTRACT_ADDRESS,
-                    abi: SplitPayAbi,
-                    chain,
-                    functionName: "settle",
-                    args: [settlementId],
-                });
-                await publicClient.waitForTransactionReceipt({ hash });
-                toast.success("Settled!", { id: settleToast });
-            } catch (e) {
+                let isApprovalNeeded = await checkIfApprovalNeeded();
+                if (isApprovalNeeded) {
+                    toast.loading("Approving cUSD", { id: settleToast });
+                    await approveCUSD();
+                }
+                toast.loading("Paying up", { id: settleToast });
+                await callSettle();
+            } catch (error) {
                 toast.error("Something went wrong", { id: settleToast });
             }
-        }
-    }
-
-    async function settle() {
-        if (walletClient) {
-            approveCUSD()
-                .then(async () => {
-                    await callSettle();
-                })
-                .catch((e) => {
-                    console.log(e);
-                });
         }
     }
 
@@ -90,7 +98,7 @@ function Settle(props: SettleProps) {
                 <h3>{title}</h3>
                 <div className="flex items-center gap-x-2">
                     {paid ? (
-                        <span className="text-green-600">Settled</span>
+                        <span className="text-green-600">Squared</span>
                     ) : (
                         <span className="text-red-600">Pending</span>
                     )}
@@ -100,9 +108,9 @@ function Settle(props: SettleProps) {
                 {!paid && (
                     <button
                         onClick={settle}
-                        className="border border-black p-2"
+                        className="border bg-prosperity border-black px-4 py-2"
                     >
-                        Settle
+                        Pay up
                     </button>
                 )}
                 <h3>{formatEther(amount)} cUSD</h3>
