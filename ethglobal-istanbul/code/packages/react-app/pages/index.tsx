@@ -136,7 +136,7 @@ export default function Home() {
             <Tab.Group defaultIndex={0}>
                 <Tab.List className="mt-10 border border-black w-screen grid grid-cols-2 max-w-[500px] bg-transparent">
                     <CustomTab>Expenses</CustomTab>
-                    <CustomTab>Settle Up</CustomTab>
+                    <CustomTab>Square it Up</CustomTab>
                 </Tab.List>
                 <Tab.Panels className="w-full h-full">
                     <Tab.Panel className="w-full pt-2 flex flex-col items-center h-full">

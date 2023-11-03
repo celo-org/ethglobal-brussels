@@ -90,7 +90,7 @@ function Settle(props: SettleProps) {
                 <h3>{title}</h3>
                 <div className="flex items-center gap-x-2">
                     {paid ? (
-                        <span className="text-green-600">Settled</span>
+                        <span className="text-green-600">Squared</span>
                     ) : (
                         <span className="text-red-600">Pending</span>
                     )}
@@ -102,7 +102,7 @@ function Settle(props: SettleProps) {
                         onClick={settle}
                         className="border border-black p-2"
                     >
-                        Settle
+                        Pay up
                     </button>
                 )}
                 <h3>{formatEther(amount)} cUSD</h3>
