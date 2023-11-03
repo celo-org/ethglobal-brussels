@@ -102,7 +102,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
             expenseTitle.length > 0 &&
             expenseAmount.length > 0 &&
             settlers.length > 0 &&
-            settlers.map((element) => !element.startsWith("0x")).length === 0
+            settlers.map((element) => !element.startsWith("0x")).includes(true)
         ) {
             return setIsFormValid(true);
         }
