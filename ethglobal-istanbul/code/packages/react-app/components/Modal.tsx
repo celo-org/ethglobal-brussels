@@ -77,6 +77,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
     }
 
     async function lookup(index: number) {
+        let lookupToast = toast.loading("Looking up the address");
         let response: Response = await fetch(
             `/api/socialconnect/lookup?${new URLSearchParams({
                 handle: settlers[index],
@@ -89,8 +90,10 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
         let lookupResponse: LookupResponse = await response.json();
         if (lookupResponse.accounts.length > 0) {
             addSettler(index, lookupResponse.accounts[0]);
+            toast.success("Address found!", { id: lookupToast });
         } else {
             addSettler(index, "");
+            toast.error("No Address found", { id: lookupToast });
         }
     }
 
