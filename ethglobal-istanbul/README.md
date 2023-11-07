@@ -51,7 +51,11 @@ Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where d
 
 ## Resources for hackers
 
-🙋‍♂️ [Ask for help](https://github.com/celo-org/ethglobal-istanbul/discussions/categories/q-a) · [Discord](https://discord.com/invite/celo)
+🙋‍♂️ Ask for help
+
+-   [Github Discussions (Recommended)](https://github.com/celo-org/ethglobal-istanbul/discussions/categories/q-a)
+-   [Celo Discord](https://discord.com/invite/celo)
+-   [ETHGlobal Discord](https://discord.gg/ethglobal)
 
 ### Get started using Celo Composer
 
