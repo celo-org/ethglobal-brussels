@@ -4,22 +4,22 @@
 
 <p align="center">
 
-<h2 style="text-align:center; font-weight:700">Celo is sponsoring ETHGlobal Istanbul!</h2>
+<h2 align="center">Celo is sponsoring ETHGlobal Istanbul!</h2>
 
-<h3 style="text-align:center; font-weight:700">Prizes!</h3>
+<h3 align="center">Prizes!</h3>
 
-<h4 style="text-align:center; font-weight:500">Best Overall</h4>
+<h4 align="center">Best Overall</h4>
 
-<h5 style="text-align:center; font-weight:600">3000 USDC · 2000 USDC · 1000 USDC</h5>
+<h5 align="center">3000 USDC · 2000 USDC · 1000 USDC</h5>
 
-<h4 style="text-align:center; font-weight:500">Best Payment dApp for Real World MiniPay or Valora</h4>
+<h4 align="center">Best Payment dApp for Real World MiniPay or Valora</h4>
 
-<h5 style="text-align:center; font-weight:600">2000 USDC</h5>
+<h5 align="center">2000 USDC</h5>
 
-<h4 style="text-align:center; font-weight:500">Best Use of AA or SocialConnect
+<h4 align="center">Best Use of AA or SocialConnect
 </h4>
 
-<h5 style="text-align:center; font-weight:600">2000 USDC</h5>
+<h5 align="center">2000 USDC</h5>
 
 </p>
 
