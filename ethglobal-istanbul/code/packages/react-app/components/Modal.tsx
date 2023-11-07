@@ -102,7 +102,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
             expenseTitle.length > 0 &&
             expenseAmount.length > 0 &&
             settlers.length > 0 &&
-            settlers.map((element) => !element.startsWith("0x")).length === 0
+            !settlers.map((element) => element.startsWith("0x")).includes(false)
         ) {
             return setIsFormValid(true);
         }
@@ -207,7 +207,7 @@ export default function MyModal({ isOpen, setIsOpen }: ModalProps) {
                                             onClick={addSettlerField}
                                             className="self-start px-2 py-2 bg-prosperity border-black border"
                                         >
-                                            + Add Settler
+                                            + Add Friend
                                         </button>
                                     </div>
 

@@ -1,4 +1,4 @@
-import { Alfajores, Celo } from "@celo/rainbowkit-celo/chains";
+import { Celo } from "@celo/rainbowkit-celo/chains";
 import celoGroups from "@celo/rainbowkit-celo/lists";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
