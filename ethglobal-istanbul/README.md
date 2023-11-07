@@ -45,6 +45,32 @@ Workshop Room 1
 
 Learn how to build decentralized applications for real world use cases and how to deploy your first dApp on Celo. In this workshop we'll go through an overview of Celo, an EVM compatible layer 1 blockchain, and how you can improve user experience for onboarding using SocialConnect and Account Abstraction on Celo.
 
+## Judging Criteria
+
+For all bounties
+
+-   Contracts must be deployed on Alfajores or Mainnet
+-   Demo to someone on the Celo team during Sponsor Judging
+-   Mention smart contract addresses of all contracts deployed on Celo in your top-level project README, also Verify them on Celoscan or Celo Explorer.
+
+For "Best Payment dApp for Real World MiniPay"
+
+-   Project must be demo'ed using MiniPay Site Tester
+
+For "Best Payment dApp for Real World Valora"
+
+-   TODO
+
+For "Best Use of AA"
+
+-   Mention your "Smart Account Factory address" or/and "Paymaster Address" or/and "Smart Account" created using some factory in your project README.
+-   Mention a Tx Hash/Link performed using AA in your project README.
+
+For "Best Use of SocialConnect"
+
+-   Mention the Issuer address you are using for lookups in your project README.
+-   If you are using your own Issuer address, mention that in the README.
+
 ## What is Celo?
 
 Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where developers can build decentralized applications that create the conditions for prosperity — for everyone.
