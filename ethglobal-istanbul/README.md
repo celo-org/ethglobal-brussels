@@ -2,22 +2,26 @@
 
 # ETHGlobal Istanbul
 
-<p style="text-align:center; font-weight:700">Celo is sponsoring ETHGlobal Istanbul!</text>
+<p align="center">
 
-<p style="text-align:center; font-weight:700">Prizes!</text>
+<h2 style="text-align:center; font-weight:700">Celo is sponsoring ETHGlobal Istanbul!</h2>
 
-<p style="text-align:center; font-weight:500">Best Overall</text>
+<h3 style="text-align:center; font-weight:700">Prizes!</h3>
 
-<p style="text-align:center; font-weight:600">3000 USDC · 2000 USDC · 1000 USDC</text>
+<h4 style="text-align:center; font-weight:500">Best Overall</h4>
 
-<p style="text-align:center; font-weight:500">Best Payment dApp for Real World MiniPay or Valora</text>
+<h5 style="text-align:center; font-weight:600">3000 USDC · 2000 USDC · 1000 USDC</h5>
 
-<p style="text-align:center; font-weight:600">2000 USDC</text>
+<h4 style="text-align:center; font-weight:500">Best Payment dApp for Real World MiniPay or Valora</h4>
 
-<p style="text-align:center; font-weight:500">Best Use of AA or SocialConnect
-</text>
+<h5 style="text-align:center; font-weight:600">2000 USDC</h5>
 
-<p style="text-align:center; font-weight:600">2000 USDC</text>
+<h4 style="text-align:center; font-weight:500">Best Use of AA or SocialConnect
+</h4>
+
+<h5 style="text-align:center; font-weight:600">2000 USDC</h5>
+
+</p>
 
 ### Workshop Details
 
