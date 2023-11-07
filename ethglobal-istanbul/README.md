@@ -41,13 +41,15 @@ Workshop Room 1
 
 Learn how to build decentralized applications for real world use cases and how to deploy your first dApp on Celo. In this workshop we'll go through an overview of Celo, an EVM compatible layer 1 blockchain, and how you can improve user experience for onboarding using SocialConnect and Account Abstraction on Celo.
 
-### What is Celo?
+## What is Celo?
 
 Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where developers can build decentralized applications that create the conditions for prosperity — for everyone.
 
-### Resources for hackers!
+## Resources for hackers!
 
-#### Get started using Celo Composer
+🙋‍♂️ [Ask for help](https://github.com/celo-org/ethglobal-istanbul/discussions/categories/q-a)
+
+### Get started using Celo Composer
 
 We've put together [this starter project](https://github.com/celo-academy/celo-composer-example) to help you get started quickly, using contracts already deployed to either testnet or Celo mainnet. The project provides: a storage example, how to iterate through a subgraph.
 
@@ -76,7 +78,7 @@ Advanced developers can use [Celo Composer](https://github.com/celo-org/celo-com
 -   [Workshop: Building an NFT collection on Celo using Celo composer
     ](https://www.youtube.com/watch?v=hf5gTAQ8G10)
 
-#### SocialConnect
+### SocialConnect
 
 SocialConnect is an open source protocol that maps off-chain personal identifiers (such as phone numbers, twitter handles, etc.) to on-chain account addresses. This enables a convenient and interoperable user experience for use cases such as:
 
@@ -94,9 +96,9 @@ SocialConnect uses a federated model, meaning that anyone has the power to be an
 
 We've made a mini-series to explain you:
 
-[Celo Spark: SocialConnect Mini-Series (1/3) — What Is It?](https://www.youtube.com/watch?v=a_756GRPcV4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=1)
-[Celo Spark: SocialConnect Mini-Series (2/3) — How Does It Works?](https://www.youtube.com/watch?v=bzZbfoPLYM4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=2)
-[Celo Spark: SocialConnect Mini-Series (3/3) — Coding Session](https://www.youtube.com/watch?v=qrIHC496avs&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=3)
+-   [Celo Spark: SocialConnect Mini-Series (1/3) — What Is It?](https://www.youtube.com/watch?v=a_756GRPcV4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=1)
+-   [Celo Spark: SocialConnect Mini-Series (2/3) — How Does It Works?](https://www.youtube.com/watch?v=bzZbfoPLYM4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=2)
+-   [Celo Spark: SocialConnect Mini-Series (3/3) — Coding Session](https://www.youtube.com/watch?v=qrIHC496avs&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=3)
 
 [Quickstart](https://github.com/celo-org/social-connect#-quickstart)
 
