@@ -43,9 +43,9 @@
 
 ## About The Project
 
-|                                                      |                                                        |                                                            |
-| :--------------------------------------------------: | :----------------------------------------------------: | :--------------------------------------------------------: |
-| ![](/code/packages/react-app/public/main_screen.png) | ![](/code/packages/react-app/public/expense_modal.png) | ![](/code/packages/react-app/public/resolving_address.png) |
+|                                                |                                                  |                                                      |
+| :--------------------------------------------: | :----------------------------------------------: | :--------------------------------------------------: |
+| ![](packages/react-app/public/main_screen.png) | ![](packages/react-app/public/expense_modal.png) | ![](packages/react-app/public/resolving_address.png) |
 
 SplitParty is a dApp that can run inside MiniPay Site Tester, it let's user split expenses among friends. The dApp also has a feature to lookup MiniPay registered users so you can use phone number of the user instead of their entire account address.
 
