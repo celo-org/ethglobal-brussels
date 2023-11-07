@@ -125,15 +125,12 @@ If you don't do this you will get `odisAuthError`.
 
 #### Videos
 
-[![Introduction to SocialConnect](https://img.youtube.com/vi/XO_33vb45V4/0.jpg)](https://www.youtube.com/watch?v=XO_33vb45V4)
+|                                                                                                                                                                                                                  |                                                                                                                                                                                                              |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                          [![Introduction to SocialConnect](https://img.youtube.com/vi/XO_33vb45V4/0.jpg)](https://www.youtube.com/watch?v=XO_33vb45V4)                                           |  [![Celo Spark: SocialConnect Mini-Series (1/3) — What Is It?](https://img.youtube.com/vi/a_756GRPcV4/0.jpg)](https://www.youtube.com/watch?v=a_756GRPcV4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=1)   |
+| [![Celo Spark: SocialConnect Mini-Series (2/3) — How Does It Works?](https://img.youtube.com/vi/bzZbfoPLYM4/0.jpg)](https://www.youtube.com/watch?v=bzZbfoPLYM4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=2) | [![Celo Spark: SocialConnect Mini-Series (3/3) — Coding Session](https://img.youtube.com/vi/qrIHC496avs/0.jpg)](https://www.youtube.com/watch?v=qrIHC496avs&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=3) |
 
-[![Celo Spark: SocialConnect Mini-Series (1/3) — What Is It?](https://img.youtube.com/vi/a_756GRPcV4/0.jpg)](https://www.youtube.com/watch?v=a_756GRPcV4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=1)
-
-[![Celo Spark: SocialConnect Mini-Series (2/3) — How Does It Works?](https://img.youtube.com/vi/bzZbfoPLYM4/0.jpg)](https://www.youtube.com/watch?v=bzZbfoPLYM4&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=2)
-
-[![Celo Spark: SocialConnect Mini-Series (3/3) — Coding Session](https://www.youtube.com/vi/qrIHC496avs/0.jpg)](https://www.youtube.com/watch?v=qrIHC496avs&list=PLsQbsop73cfErtQwacE4WgqQwoVcLvLZS&index=3)
-
-[Quickstart](https://github.com/celo-org/social-connect#-quickstart)
+#### [SocialConnect Quickstart](https://github.com/celo-org/social-connect#-quickstart)
 
 #### 🚀 Examples
 
