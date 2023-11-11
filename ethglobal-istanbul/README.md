@@ -218,6 +218,8 @@ MiniPay is a stablecoin-based non-custodial wallet that allows you to send and r
 
 “Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts” - Ethereum Roadmap
 
+Candide Atelier supports building with Safe Accounts and ERC-4337 on Celo.
+
 ThirdWeb SDK supports custom Account Factories, custom Accounts.
 
 Pimlico Bundler and paymaster are live on Celo Testnet and Mainnet.
@@ -236,12 +238,14 @@ Transaction batching is also supported!
 #### [Cheatsheet](https://celoplatform.notion.site/Account-Abstraction-Cheatsheet-f75f673d38af40f382dc4e8c079cb0b5?pvs=4) 🤫
 
 #### Guides
-
+-   [Hack on Celo with Candide](https://docs.google.com/document/d/1_z1oh-u6Mnz_y_Otk4SBLvGVoRn8NpBj1zgZSR4ARYg/edit?usp=sharing)
 -   [Thirdweb Smart Wallet](https://portal.thirdweb.com/wallet/smart-wallet)
 -   [Submit a User Operation with a Verifying Paymaster](https://docs.pimlico.io/tutorial/tutorial-1)
 -   [Submit a User Operation with an ERC-20 Paymaster](https://docs.pimlico.io/tutorial/tutorial-2)
--   [Candide bundler Getting Started](https://docs.candide.dev/wallet/guides/getting-started/)
--   [Send a Gasless Transaction](https://docs.candide.dev/wallet/guides/send-gasless-tx/)
+-   [Send your first User Operation with a Safe Account](https://docs.candide.dev/wallet/guides/getting-started/)
+-   [Send a Gasless Transaction with a Safe Account](https://docs.candide.dev/wallet/guides/send-gasless-tx/)
+-   [Submit a User Operation and Pay Gas with cUSD or cEUR](https://docs.candide.dev/wallet/guides/pay-gas-in-erc20/)
+
 
 #### Videos
 
@@ -251,6 +255,7 @@ Transaction batching is also supported!
 
 -   [Allowlist Paymaster dApp](https://github.com/celo-academy/allowlist-paymaster-dapp)
 -   [4337 dApp](https://github.com/celo-academy/erc-4337-dApp)
+-   [4337 with a Safe Account Examples](https://github.com/candidelabs/abstractionkit/tree/main/examples)
 
 ### Show and Tell
 
