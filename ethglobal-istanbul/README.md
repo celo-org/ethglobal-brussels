@@ -59,7 +59,7 @@ For "Best Payment dApp for Real World MiniPay"
 
 For "Best Payment dApp for Real World Valora"
 
--   TODO
+-   Project must be demo'ed in the latest version of Valora (or if you make modifications to Valora, a build on your local machine). If you're using Valora hooks, see the [Live Preview in Valora](https://docs.valora.xyz/hooks/live-preview) feature.
 
 For "Best Use of AA"
 
@@ -212,7 +212,19 @@ MiniPay is a stablecoin-based non-custodial wallet that allows you to send and r
 
 **Come to Celo booth**
 
-### Valora (TODO)
+### Valora
+
+Valora is an open source self-custodial wallet and is the easiest way to send, swap, collect and purchase digital goods on the Celo blockchain.
+
+Valora has a plug-in inteface called [hooks](https://docs.valora.xyz/hooks/) that allows builders to provide native integrations for their favorite dapp or protocol.
+
+#### Ideas
+
+-   A hooks integration to claim rewards or earnings from a dapp
+    -   Example:- Claim Curve rewards
+-   A hooks integration to stake some portion of Celo using liquid staking
+-   A hooks integratoin that prices positions/assets not currently supported
+    -   Example:- Ethichub bonds
 
 ### Account Abstraction on Celo
 
