@@ -63,7 +63,6 @@ For "Best Mobile dApp on Celo"
 
     -   Project must be demo'ed in the latest version of Valora (or if you make modifications to Valora, a build on your local machine). If you're using Valora hooks, see the [Live Preview in Valora](https://docs.valora.xyz/hooks/live-preview) feature.
 
-
 For "Best Use of AA"
 
 -   Mention your "Smart Account Factory address" or/and "Paymaster Address" or/and "Smart Account" created using some factory in your project README.
