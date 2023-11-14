@@ -1,4 +1,4 @@
-![ethglobal_istanbul](./images/ethglobal_istanbul.png)
+![ethglobal_istanbul](./ethglobal-istanbul/images/ethglobal_istanbul.png)
 
 <p align="center">
 
