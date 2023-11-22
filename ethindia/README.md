@@ -1,4 +1,4 @@
-![ethglobal_istanbul](./ethindia/images/ethindia.png)
+![ethglobal_istanbul](./images/ethindia.png)
 
 <p align="center">
 
