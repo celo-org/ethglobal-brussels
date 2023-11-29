@@ -1,4 +1,4 @@
-![ethglobal_istanbul](./ethindia/images/ethindia.png)
+![ethglobal_istanbul](./images/ethindia.png)
 
 <p align="center">
 
@@ -7,6 +7,10 @@
 <h2 align="center">Celo is sponsoring ETHIndia 2023!</h2>
 
 <h3 align="center">Prizes!</h3>
+
+|                Best Overall                |                 Themed Bounties                  |
+| :----------------------------------------: | :----------------------------------------------: |
+| ![best_overall](./images/best_overall.png) | ![themed_bounties](./images/themed_bounties.png) |
 
 <h4 align="center">Best Overall</h4>
 
@@ -31,7 +35,7 @@
 
 #### Slides
 
-[Here](https://docs.google.com/presentation/d/1qI1VzPtz3ZLp6NDuWUWYAfPL1d6Lo9lZQ_dZXFNsB78/edit?usp=sharing)
+// TODO
 
 #### Time
 
@@ -84,6 +88,8 @@ Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where d
 -   [Github Discussions (Recommended)](https://github.com/celo-org/ethglobal-istanbul/discussions/categories/q-a)
 -   [Celo Discord](https://discord.com/invite/celo)
 -   [ETHGlobal Discord](https://discord.gg/ethglobal)
+
+💰 Using [Faucet](https://faucet.celo.org/) you can request CELO, cUSD, cEUR and cREAL tokens on testnet!
 
 ### Get started using Celo Composer
 
