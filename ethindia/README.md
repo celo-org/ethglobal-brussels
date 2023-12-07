@@ -1,4 +1,4 @@
-![ethglobal_istanbul](./ethindia/images/ethindia.png)
+![ethglobal_istanbul](./images/ethindia.png)
 
 <p align="center">
 
@@ -8,9 +8,9 @@
 
 <h3 align="center">Prizes!</h3>
 
-|                    Best Overall                     |                      Themed Bounties                      |
-| :-------------------------------------------------: | :-------------------------------------------------------: |
-| ![best_overall](./ethindia/images/best_overall.png) | ![themed_bounties](./ethindia/images/themed_bounties.png) |
+|                Best Overall                |                 Themed Bounties                  |
+| :----------------------------------------: | :----------------------------------------------: |
+| ![best_overall](./images/best_overall.png) | ![themed_bounties](./images/themed_bounties.png) |
 
 <h4 align="center">Best Overall</h4>
 
