@@ -35,15 +35,15 @@
 
 #### Slides
 
-// TODO
+[Here](https://docs.google.com/presentation/d/1wO_hy5cGBQ7NqPf0mbYrh1xBV3NkjjZ8WBQkWmUJjsY/edit?usp=sharing)
 
 #### Time
 
-03:40 PM (Istanbul Time) – Nov 17, 2023
+05:20 PM (Indian Time) – Dec 8, 2023
 
 #### Location
 
-Workshop Room 1
+Workshop Room 2
 
 #### Description
 
