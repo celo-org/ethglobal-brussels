@@ -32,7 +32,7 @@
 
 #### Time
 
-03:20pm PM (London Time) – Mar 15, 2023
+03:20pm PM (London Time) – Mar 15, 2024
 
 #### Location
 
