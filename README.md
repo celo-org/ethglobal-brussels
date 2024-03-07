@@ -1,37 +1,30 @@
-![ethglobal_istanbul](./ethindia/images/ethindia.png)
+![ethglobal london](./ethglobal-london/images/main.png)
 
 <p align="center">
 
-<h1 align="center">ETHIndia</h1>
+<h1 align="center">ETHGlobal London</h1>
 
-<h2 align="center">Celo is sponsoring ETHIndia 2023!</h2>
+<h2 align="center">Celo is sponsoring ETHGlobal London 2024!</h2>
 
 <h3 align="center">Prizes!</h3>
 
-|                    Best Overall                     |                      Themed Bounties                      |
-| :-------------------------------------------------: | :-------------------------------------------------------: |
-| ![best_overall](./ethindia/images/best_overall.png) | ![themed_bounties](./ethindia/images/themed_bounties.png) |
+|                       Best Overall                       |                       Themed Bounties                       |
+| :------------------------------------------------------: | :---------------------------------------------------------: |
+| ![best_overall](./ethglobal-london/images/bounties1.png) | ![themed_bounties](./ethglobal-london/images/bounties2.png) |
 
-<h4 align="center">Best Overall</h4>
+<h4 align="center">Best dApp on Minipay</h4>
 
-<h5 align="center">3000 USDC · 2000 USDC · 1000 USDC</h5>
+<h5 align="center">4000 USDC · 3000 USDC · 2000 USDC</h5>
 
-<h4 align="center">Best Payment dApp for Real World MiniPay or Valora</h4>
+<h4 align="center">Best Use of Mento Stables</h4>
 
-<h5 align="center">2000 USDC</h5>
-
-<h4 align="center">Best Use of AA or SocialConnect
-</h4>
-
-<h5 align="center">2000 USDC</h5>
-
-</p>
+<h5 align="center">1000 USDC</h5>
 
 ### Workshop Details
 
 #### Title
 
-🛠 Build dApps for Real World Usecases on Celo
+📲 Build MiniPay Dapps
 
 #### Slides
 
@@ -39,15 +32,15 @@
 
 #### Time
 
-05:20 PM (Indian Time) – Dec 8, 2023
+03:20pm PM (London Time) – Mar 15, 2023
 
 #### Location
 
-Workshop Room 2
+Workshop Room 3
 
 #### Description
 
-Learn how to build decentralized applications for real world use cases and how to deploy your first dApp on Celo. In this workshop we'll go through an overview of Celo, an EVM compatible layer 1 blockchain, and how you can improve user experience for onboarding using SocialConnect and Account Abstraction on Celo.
+Learn how to build decentralized applications for real world use cases and how to deploy your first dApp on MiniPay. In this workshop we'll go through an overview of Celo, an EVM compatible layer 1 blockchain, and how you can improve user experience for onboarding by building dApps on MiniPay.
 
 ## Judging Criteria
 
@@ -57,25 +50,21 @@ For all bounties
 -   Demo to someone on the Celo team during Sponsor Judging
 -   Mention smart contract addresses of all contracts deployed on Celo in your top-level project README, also Verify them on Celoscan or Celo Explorer.
 
-For "Best Mobile dApp on Celo"
+For "Best dApp on MiniPay":
 
--   If you are building on MiniPay.
+-   Project must be demo'ed using MiniPay Site Tester
 
-    -   Project must be demo'ed using MiniPay Site Tester
-
--   If you are building Valora Hooks
-
-    -   Project must be demo'ed in the latest version of Valora (or if you make modifications to Valora, a build on your local machine). If you're using Valora hooks, see the [Live Preview in Valora](https://docs.valora.xyz/hooks/live-preview) feature.
-
-For "Best Use of AA"
+If your dApp uses AA:
 
 -   Mention your "Smart Account Factory address" or/and "Paymaster Address" or/and "Smart Account" created using some factory in your project README.
 -   Mention a Tx Hash/Link performed using AA in your project README.
 
-For "Best Use of SocialConnect"
+If your dApp uses SocialConnect:
 
 -   Mention the Issuer address you are using for lookups in your project README.
 -   If you are using your own Issuer address, mention that in the README.
+
+// TODO Mento
 
 ## What is Celo?
 
@@ -93,32 +82,57 @@ Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where d
 
 ### Get started using Celo Composer
 
-We've put together [this starter project](https://github.com/celo-academy/celo-composer-example) to help you get started quickly, using contracts already deployed to either testnet or Celo mainnet. The project provides: a storage example, how to iterate through a subgraph.
+You can use the following command to initialize MiniPay starter project:
+
+```bash
+npx @celo/celo-composer create --template minipay
+```
+
+We've put together [this MiniPay starter project](https://github.com/celo-org/minipay-template) to help you get started quickly, using contracts already deployed to either testnet or Celo mainnet. The project provides: a storage example, how to iterate through a subgraph.
 
 Advanced developers can use [Celo Composer](https://github.com/celo-org/celo-composer) from command-line to customize exactly what platform you want to build for: React, React Native (with or without Expo integration), Angular, or Flutter. It includes a Subgraph integration if you need it.
 
 [Celo Composer Docs](https://github.com/celo-org/celo-composer)
 
-##### Ideas
+### [MiniPay](https://www.opera.com/products/minipay)
 
--   Education DAO
-    -   A DAO for community members to create educational content
--   Carbon Negative NFTs
-    -   A portion of NFT sale will be used to remove carbon from the atmosphere.
--   Offline transactions
-    -   Support for offline or local network transactions in the Celo blockchain client for use in wallets with low connectivity.
+MiniPay is a stablecoin-based non-custodial wallet that allows you to send and receive funds instantly using just a phone number.
 
-[More](https://clabsco.notion.site/Celo-Hackathon-Ideas-1396d40f70944f92b5108d5100fda41b)
+[![MiniPay video](https://img.youtube.com/vi/Eebyme4QUtY/0.jpg)](https://www.youtube.com/watch?v=Eebyme4QUtY)
 
-##### Guides
+#### [Cheatsheet](https://celoplatform.notion.site/MiniPay-Cheatsheet-60066f16d136421ab2ef19522ffe6200?pvs=74) 🤫
+
+#### Ideas
+
+-   Earn Using MiniPay
+-   Billing with MiniPay
+    -   Example:- Khatabook
+-   Ecommerce Store with MiniPay
+    -   Example:- Dukaan
+-   NFT Viewer
+-   Gift cards
+-   Asset tracking and accounting
+
+#### Guides
+
+[![How to build on MiniPay](https://img.youtube.com/vi/NxZojrjVXQA/0.jpg)](https://www.youtube.com/watch?v=NxZojrjVXQA)
+
+-   [Build on MiniPay](https://docs.celo.org/developer/build-on-minipay)
 
 -   [Intro to Celo ETHGlobal Guide](https://ethglobal.com/guides/intro-to-celo-j80ti)
+
 -   [Celo Composer: Extend and Customize your Full-Stack Mobile dApps
     ](https://joenyzio.medium.com/celo-dappstarter-customize-your-full-stack-mobile-dapps-on-celo-232d85b7a2c5)
+
 -   [Celo Spark: Celo Composer in 1 min
     ](https://www.youtube.com/watch?v=pNEDt34utqk)
+
 -   [Workshop: Building an NFT collection on Celo using Celo composer
     ](https://www.youtube.com/watch?v=hf5gTAQ8G10)
+
+#### How to get Mainnet cUSD?
+
+**Come to Celo booth**
 
 ### SocialConnect
 
@@ -192,47 +206,6 @@ The [Runtime Environments section](docs/privacy.md#runtime-environments) shows i
 #### 📄 Documentation
 
 For a deeper dive under the hood and specific implementation details, check out the documentation of the [protocol](docs/protocol.md) for details on how to interact with the on-chain registry, [privacy](docs/privacy.md) for how identifiers are obfuscated, and [key-setup](docs/key-setup.md) to setup your role keys to interact with the protocol.
-
-### [MiniPay](https://www.opera.com/products/minipay)
-
-MiniPay is a stablecoin-based non-custodial wallet that allows you to send and receive funds instantly using just a phone number.
-
-[![MiniPay video](https://img.youtube.com/vi/6zvErspk7G8/0.jpg)](https://www.youtube.com/watch?v=6zvErspk7G8)
-
-#### Ideas
-
--   Earn Using MiniPay
--   Billing with MiniPay
-    -   Example:- Khatabook
--   Ecommerce Store with MiniPay
-    -   Example:- Dukaan
--   NFT Viewer
--   Gift cards
--   Asset tracking and accounting
-
-#### Guides
-
-[![How to build on MiniPay](https://img.youtube.com/vi/NxZojrjVXQA/0.jpg)](https://www.youtube.com/watch?v=NxZojrjVXQA)
-
--   [Build on MiniPay](https://docs.celo.org/developer/build-on-minipay)
-
-#### How to get Mainnet cUSD?
-
-**Come to Celo booth**
-
-### Valora
-
-Valora is an open source self-custodial wallet and is the easiest way to send, swap, collect and purchase digital goods on the Celo blockchain.
-
-Valora has a plug-in inteface called [hooks](https://docs.valora.xyz/hooks/) that allows builders to provide native integrations for their favorite dapp or protocol.
-
-#### Ideas
-
--   A hooks integration to claim rewards or earnings from a dapp
-    -   Example:- Claim Curve rewards
--   A hooks integration to stake some portion of Celo using liquid staking
--   A hooks integratoin that prices positions/assets not currently supported
-    -   Example:- Ethichub bonds
 
 ### Account Abstraction on Celo
 
