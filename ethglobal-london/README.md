@@ -1,4 +1,4 @@
-![ethglobal london](./ethglobal-london/images/main.png)
+![ethglobal london](./images/main.png)
 
 <p align="center">
 
@@ -8,9 +8,9 @@
 
 <h3 align="center">Prizes!</h3>
 
-|                       Best Overall                       |                       Themed Bounties                       |
-| :------------------------------------------------------: | :---------------------------------------------------------: |
-| ![best_overall](./ethglobal-london/images/bounties1.png) | ![themed_bounties](./ethglobal-london/images/bounties2.png) |
+|              Best Overall               |              Themed Bounties               |
+| :-------------------------------------: | :----------------------------------------: |
+| ![best_overall](./images/bounties1.png) | ![themed_bounties](./images/bounties2.png) |
 
 <h4 align="center">Best dApp on Minipay</h4>
 
