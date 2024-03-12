@@ -54,6 +54,11 @@ For "Best dApp on MiniPay":
 
 -   Project must be demo'ed using MiniPay Site Tester
 
+For "Best use of Mento stables":
+
+-   Use Mento's cUSD as gas token on your application
+-   Deploy your contracts on Celo Alfajores Testnet or Celo mainnet
+
 If your dApp uses AA:
 
 -   Mention your "Smart Account Factory address" or/and "Paymaster Address" or/and "Smart Account" created using some factory in your project README.
