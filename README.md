@@ -1,4 +1,4 @@
-![ethglobal seoul](./ethseoul/images/710.webp)
+![ethseoul](./ethseoul/images/710.webp)
 
 <p align="center">
 
@@ -64,7 +64,6 @@ Celo is the carbon-negative, mobile-first, EVM-compatible PoS blockchain where d
 
 -   [Github Discussions (Recommended)](https://github.com/celo-org/ethglobal-istanbul/discussions/categories/q-a)
 -   [Celo Discord](https://discord.com/invite/celo)
--   [ETHGlobal Discord](https://discord.gg/ethglobal)
 
 💰 Using [Faucet](https://faucet.celo.org/) you can request CELO, cUSD, cEUR and cREAL tokens on testnet!
 
