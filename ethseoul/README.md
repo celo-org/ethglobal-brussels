@@ -1,4 +1,4 @@
-![ethseoul](./ethseoul/images/710.webp)
+![ethseoul](./images/710.webp)
 
 <p align="center">
 
@@ -6,9 +6,9 @@
 
 <h2 align="center">Celo is sponsoring ETHSeoul 2024!</h2>
 
-|                    Bounties                     |
-| :---------------------------------------------: |
-| ![best_overall](./ethseoul/images/bounties.png) |
+|                Bounties                |
+| :------------------------------------: |
+| ![best_overall](./images/bounties.png) |
 
 <h4 align="center">Best mobile dApp</h4>
 
