@@ -18,7 +18,7 @@
 
 #### Slides
 
-[Here](https://docs.google.com/presentation/d/15vCsXPWbQ4GKbHtfDiqlVTqQIGsGbQzoHcwXQFWbO00/edit?usp=sharing)
+// TODO
 
 #### Time
 
